@@ -1,0 +1,24 @@
+{
+  "name": "aw-parser",
+  "version": "0.0.1",
+  "description": "Fountain parser",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -s awParser index.js -o dist/aw-parser.amd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ifrost@github.com/afterwriting/aw-parser.git"
+  },
+  "keywords": [
+    "fountain",
+    "parser",
+    "screenwriting"
+  ],
+  "author": "Piotr Jamroz <pm.jamroz@gmail.com> (https://about.me/piotr.jamroz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afterwriting/aw-parser/issues"
+  },
+  "homepage": "https://github.com/afterwriting/aw-parser#readme"
+}
