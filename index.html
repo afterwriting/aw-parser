@@ -1,0 +1,75 @@
+<html>
+<head>
+    <script type="text/javascript" src="dist/aw-parser.amd.js"></script>
+</head>
+<body>
+
+<textarea id="editor">
+
+Title: Test Script
+Author: John Doe
+
+INT. TEST - DAY
+
+Action test. Action test. Action test. Action test. Action test. Action test. Action test. Action test. Action test.
+
+HERO 1
+Hello --
+Hello!
+
+HERO 2
+Hello
+</textarea>
+
+<p id="results"></p>
+
+<script type="text/javascript">
+
+    function getEditor() {
+        return document.getElementById('editor');
+    }
+
+    function getResults() {
+        return document.getElementById('results');
+    }
+
+    function tokenToString(token) {
+        var text;
+        text = token.text.length > 20 ? (token.text.substr(0, 17) + '...') : token.text;
+        return token.type + ' [' + token.start + ':' + token.end + '] ' + text;
+    }
+
+    function parserResultToHTML(parserResult) {
+        var titleHTML, pagesHTML;
+
+        titleHTML = parserResult.title_page.map(tokenToString).join('<br />');
+        pagesHTML = parserResult.tokens.map(tokenToString).join('<br />');
+
+        return '<b>Title:</b><br/><br/>' + titleHTML + '<br/><br/><b>Pages:</b><br/><br/>' + pagesHTML;
+    }
+
+    function parse() {
+        var script, result;
+
+        script = getEditor().value;
+        result = awParser.parser.parse(script, {
+            print_actions: true,
+            print_dialogues: true,
+            print_synopsis: true,
+            print_sections: true,
+            print_headers: true,
+            print_notes: true
+        });
+
+        getResults().innerHTML = parserResultToHTML(result);
+    }
+
+    window.onload = function() {
+        getEditor().onkeyup = parse;
+        parse();
+    }
+
+</script>
+
+</body>
+</html>
