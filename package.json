@@ -4,7 +4,7 @@
   "description": "Fountain parser",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -s awParser index.js -o dist/aw-parser.amd.js"
+    "build": "browserify -s 'aw-parser' index.js -o dist/aw-parser.amd.js"
   },
   "repository": {
     "type": "git",
