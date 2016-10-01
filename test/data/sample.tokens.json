@@ -1,0 +1,1130 @@
+{
+  "title_page": [
+    {
+      "text": "_Screenplay title_\nSecond line",
+      "type": "title",
+      "line": 5,
+      "start": 53,
+      "end": 60
+    },
+    {
+      "text": " written by",
+      "type": "credit",
+      "line": 8,
+      "start": 94,
+      "end": 112
+    },
+    {
+      "text": "Author 1,\n**Author 2** & Author 3",
+      "type": "author",
+      "line": 9,
+      "start": 113,
+      "end": 121
+    },
+    {
+      "text": " script based on...",
+      "type": "source",
+      "line": 12,
+      "start": 158,
+      "end": 184
+    },
+    {
+      "text": "Additional notes (1)\nAdditional notes (2)",
+      "type": "notes",
+      "line": 13,
+      "start": 185,
+      "end": 192
+    },
+    {
+      "text": " 01/12/2010",
+      "type": "date",
+      "line": 16,
+      "start": 237,
+      "end": 253
+    },
+    {
+      "text": "e-mail: email@email.com\nphone: +12 34 567 89",
+      "type": "contact",
+      "line": 17,
+      "start": 254,
+      "end": 262
+    },
+    {
+      "text": " Licence info",
+      "type": "copyright",
+      "line": 20,
+      "start": 313,
+      "end": 336
+    }
+  ],
+  "tokens": [
+    {
+      "text": "[[Script note.",
+      "type": "action",
+      "line": 0,
+      "start": 0,
+      "end": 14
+    },
+    {
+      "text": "- blah blah blah",
+      "type": "action",
+      "line": 1,
+      "start": 15,
+      "end": 31
+    },
+    {
+      "text": "- blah blah blah",
+      "type": "action",
+      "line": 2,
+      "start": 32,
+      "end": 48
+    },
+    {
+      "text": "]]",
+      "type": "shot",
+      "line": 3,
+      "start": 49,
+      "end": 51
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 4,
+      "start": 52,
+      "end": 52
+    },
+    {
+      "text": "Act 1: basic blocks",
+      "type": "section",
+      "line": 22,
+      "start": 338,
+      "end": 359
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 23,
+      "start": 360,
+      "end": 360
+    },
+    {
+      "text": "Sequence 1: scene heading, action, dialogue, parenthetical",
+      "type": "section",
+      "line": 24,
+      "start": 361,
+      "end": 422
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 25,
+      "start": 423,
+      "end": 423
+    },
+    {
+      "text": "INT. BASIC BLOCKS - DAY",
+      "type": "scene_heading",
+      "line": 26,
+      "start": 424,
+      "end": 447
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 27,
+      "start": 448,
+      "end": 448
+    },
+    {
+      "text": "Action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action.",
+      "type": "action",
+      "line": 28,
+      "start": 449,
+      "end": 680
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 29,
+      "start": 681,
+      "end": 681
+    },
+    {
+      "text": "Action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action.",
+      "type": "action",
+      "line": 30,
+      "start": 682,
+      "end": 841
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 31,
+      "start": 842,
+      "end": 842
+    },
+    {
+      "text": "HERO 1",
+      "type": "character",
+      "line": 32,
+      "start": 843,
+      "end": 849
+    },
+    {
+      "text": "Blah blah blah blah.",
+      "type": "dialogue",
+      "line": 33,
+      "start": 850,
+      "end": 870
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 34,
+      "start": 871,
+      "end": 871
+    },
+    {
+      "text": "HERO 2",
+      "type": "character",
+      "line": 35,
+      "start": 872,
+      "end": 878
+    },
+    {
+      "text": "Blah blah.",
+      "type": "dialogue",
+      "line": 36,
+      "start": 879,
+      "end": 889
+    },
+    {
+      "text": "(parenthetical)",
+      "type": "parenthetical",
+      "line": 37,
+      "start": 890,
+      "end": 905
+    },
+    {
+      "text": "Blah blah.",
+      "type": "dialogue",
+      "line": 38,
+      "start": 906,
+      "end": 916
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 39,
+      "start": 917,
+      "end": 917
+    },
+    {
+      "text": "Action. action. action. action.",
+      "type": "action",
+      "line": 40,
+      "start": 918,
+      "end": 949
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 41,
+      "start": 950,
+      "end": 950
+    },
+    {
+      "text": "Sequence 2: boneyard and notes",
+      "type": "section",
+      "line": 42,
+      "start": 951,
+      "end": 984
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 43,
+      "start": 985,
+      "end": 985
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "EXT. BASIC BLOCKS - NIGHT",
+      "type": "scene_heading",
+      "line": 44,
+      "start": 986,
+      "end": 1011
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 45,
+      "start": 1012,
+      "end": 1012
+    },
+    {
+      "text": "Action. Action. Action[[ (inline note)]]. Action.",
+      "type": "action",
+      "line": 46,
+      "start": 1013,
+      "end": 1062
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 47,
+      "start": 1063,
+      "end": 1063
+    },
+    {
+      "text": "Action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action. action.",
+      "type": "action",
+      "line": 56,
+      "start": 1072,
+      "end": 1231
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 57,
+      "start": 1232,
+      "end": 1232
+    },
+    {
+      "text": "[[Long long long long long long long long long long long long long long long long long long long long long long long long long long long long long...",
+      "type": "action",
+      "line": 58,
+      "start": 1233,
+      "end": 1382
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 59,
+      "start": 1383,
+      "end": 1383
+    },
+    {
+      "text": "...multiline note]]",
+      "type": "action",
+      "line": 60,
+      "start": 1384,
+      "end": 1403
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 61,
+      "start": 1404,
+      "end": 1404
+    },
+    {
+      "text": "Sequence 3: Formatting",
+      "type": "section",
+      "line": 62,
+      "start": 1405,
+      "end": 1430
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 63,
+      "start": 1431,
+      "end": 1431
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "INT. FORMATTING - DAY",
+      "type": "scene_heading",
+      "line": 64,
+      "start": 1432,
+      "end": 1453
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 65,
+      "start": 1454,
+      "end": 1454
+    },
+    {
+      "text": "Normal test, _underline test_, *italic test*, **bold test**, ***bold and italic test***, _*underline and italic test*_, _**underline and bold test_**, _***underline, bold and italic test***_.",
+      "type": "action",
+      "line": 66,
+      "start": 1455,
+      "end": 1646
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 67,
+      "start": 1647,
+      "end": 1647
+    },
+    {
+      "text": "_Long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long **(with nested bold)** long long long long underlined text._",
+      "type": "action",
+      "line": 68,
+      "start": 1648,
+      "end": 2009
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 69,
+      "start": 2010,
+      "end": 2010
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "EXT. ESCAPING FORMATTING - NIGHT",
+      "type": "scene_heading",
+      "line": 70,
+      "start": 2011,
+      "end": 2043
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 71,
+      "start": 2044,
+      "end": 2044
+    },
+    {
+      "text": "What the f\\*ck! Escape\\_escape\\*escape.",
+      "type": "action",
+      "line": 72,
+      "start": 2045,
+      "end": 2085
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 73,
+      "start": 2086,
+      "end": 2086
+    },
+    {
+      "text": "CENTERED, **BOLD**, _UNDERLINE_",
+      "type": "centered",
+      "line": 74,
+      "start": 2087,
+      "end": 2122
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 75,
+      "start": 2123,
+      "end": 2123
+    },
+    {
+      "text": "TRANSITION:",
+      "type": "transition",
+      "line": 76,
+      "start": 2124,
+      "end": 2137
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 77,
+      "start": 2138,
+      "end": 2138
+    },
+    {
+      "text": "Page break test...",
+      "type": "action",
+      "line": 78,
+      "start": 2139,
+      "end": 2157
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 79,
+      "start": 2158,
+      "end": 2158
+    },
+    {
+      "text": "",
+      "type": "page_break",
+      "line": 80,
+      "start": 2159,
+      "end": 2162
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 81,
+      "start": 2163,
+      "end": 2163
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "FORCED HEADER",
+      "type": "scene_heading",
+      "line": 82,
+      "start": 2164,
+      "end": 2178
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 83,
+      "start": 2179,
+      "end": 2179
+    },
+    {
+      "text": "Action.",
+      "type": "action",
+      "line": 84,
+      "start": 2180,
+      "end": 2187
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 85,
+      "start": 2188,
+      "end": 2188
+    },
+    {
+      "text": "Act 2: Dialogue",
+      "type": "section",
+      "line": 86,
+      "start": 2189,
+      "end": 2206
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 87,
+      "start": 2207,
+      "end": 2207
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "INT. SPLIT DIALOGUE - DUSK",
+      "type": "scene_heading",
+      "line": 88,
+      "start": 2208,
+      "end": 2234
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 89,
+      "start": 2235,
+      "end": 2235
+    },
+    {
+      "text": "Action.",
+      "type": "action",
+      "line": 90,
+      "start": 2236,
+      "end": 2243
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 91,
+      "start": 2244,
+      "end": 2244
+    },
+    {
+      "text": "HERO 1",
+      "type": "character",
+      "line": 92,
+      "start": 2245,
+      "end": 2251
+    },
+    {
+      "text": "Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah. Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.",
+      "type": "dialogue",
+      "line": 93,
+      "start": 2252,
+      "end": 4054
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 94,
+      "start": 4055,
+      "end": 4055
+    },
+    {
+      "text": "Action.",
+      "type": "action",
+      "line": 95,
+      "start": 4056,
+      "end": 4063
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 96,
+      "start": 4064,
+      "end": 4064
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "INT. DUAL DIALOGUE - NIGHT",
+      "type": "scene_heading",
+      "line": 97,
+      "start": 4065,
+      "end": 4091
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 98,
+      "start": 4092,
+      "end": 4092
+    },
+    {
+      "text": "Action action.",
+      "type": "action",
+      "line": 99,
+      "start": 4093,
+      "end": 4107
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 100,
+      "start": 4108,
+      "end": 4108
+    },
+    {
+      "text": "HERO 1",
+      "type": "character",
+      "line": 101,
+      "start": 4109,
+      "end": 4115
+    },
+    {
+      "text": "Blah!",
+      "type": "dialogue",
+      "line": 102,
+      "start": 4116,
+      "end": 4121
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 103,
+      "start": 4122,
+      "end": 4122
+    },
+    {
+      "text": "HERO 2",
+      "type": "character",
+      "line": 104,
+      "start": 4123,
+      "end": 4131
+    },
+    {
+      "text": "Blah!",
+      "type": "dialogue",
+      "line": 105,
+      "start": 4132,
+      "end": 4137
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 106,
+      "start": 4138,
+      "end": 4138
+    },
+    {
+      "text": "HERO 3",
+      "type": "character",
+      "line": 107,
+      "start": 4139,
+      "end": 4145
+    },
+    {
+      "text": "Blah?",
+      "type": "dialogue",
+      "line": 108,
+      "start": 4146,
+      "end": 4151
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 109,
+      "start": 4152,
+      "end": 4152
+    },
+    {
+      "text": "Action action.",
+      "type": "action",
+      "line": 110,
+      "start": 4153,
+      "end": 4167
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 111,
+      "start": 4168,
+      "end": 4168
+    },
+    {
+      "text": "Act 3: edge cases",
+      "type": "section",
+      "line": 112,
+      "start": 4169,
+      "end": 4188
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 113,
+      "start": 4189,
+      "end": 4189
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "INT. LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG SCENE HEADER.",
+      "type": "scene_heading",
+      "line": 114,
+      "start": 4190,
+      "end": 4473
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 115,
+      "start": 4474,
+      "end": 4474
+    },
+    {
+      "text": "Action.",
+      "type": "action",
+      "line": 116,
+      "start": 4475,
+      "end": 4482
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 117,
+      "start": 4483,
+      "end": 4483
+    },
+    {
+      "text": "VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY VERY LONG NAME",
+      "type": "character",
+      "line": 118,
+      "start": 4484,
+      "end": 4643
+    },
+    {
+      "text": "Hello, my name is Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Very Long Name.",
+      "type": "dialogue",
+      "line": 119,
+      "start": 4644,
+      "end": 4822
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 120,
+      "start": 4823,
+      "end": 4823
+    },
+    {
+      "text": "Act 4: Misc",
+      "type": "section",
+      "line": 121,
+      "start": 4824,
+      "end": 4837
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 122,
+      "start": 4838,
+      "end": 4838
+    },
+    {
+      "text": "Latin characters",
+      "type": "section",
+      "line": 123,
+      "start": 4839,
+      "end": 4858
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 124,
+      "start": 4859,
+      "end": 4859
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "INT. LATIN TEST - DAWN",
+      "type": "scene_heading",
+      "line": 125,
+      "start": 4860,
+      "end": 4882
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 126,
+      "start": 4883,
+      "end": 4883
+    },
+    {
+      "text": "Latin characters.",
+      "type": "action",
+      "line": 127,
+      "start": 4884,
+      "end": 4901
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 128,
+      "start": 4902,
+      "end": 4902
+    },
+    {
+      "text": "POLISH",
+      "type": "character",
+      "line": 129,
+      "start": 4903,
+      "end": 4909
+    },
+    {
+      "text": "Pchnąć w tę łódź jeża lub osiem skrzyń fig.",
+      "type": "dialogue",
+      "line": 130,
+      "start": 4910,
+      "end": 4953
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 131,
+      "start": 4954,
+      "end": 4954
+    },
+    {
+      "text": "GERMAN",
+      "type": "character",
+      "line": 132,
+      "start": 4955,
+      "end": 4961
+    },
+    {
+      "text": "Falsches Üben von Xylophonmusik quält jeden größeren Zwerg.",
+      "type": "dialogue",
+      "line": 133,
+      "start": 4962,
+      "end": 5021
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 134,
+      "start": 5022,
+      "end": 5022
+    },
+    {
+      "text": "NORWEGIAN",
+      "type": "character",
+      "line": 135,
+      "start": 5023,
+      "end": 5032
+    },
+    {
+      "text": "Blåbærsyltetøy",
+      "type": "dialogue",
+      "line": 136,
+      "start": 5033,
+      "end": 5047
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 137,
+      "start": 5048,
+      "end": 5048
+    },
+    {
+      "text": "SPANISH",
+      "type": "character",
+      "line": 138,
+      "start": 5049,
+      "end": 5056
+    },
+    {
+      "text": "El pingüino Wenceslao hizo kilómetros bajo exhaustiva lluvia y frío, añoraba a su querido cachorro.",
+      "type": "dialogue",
+      "line": 139,
+      "start": 5057,
+      "end": 5156
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 140,
+      "start": 5157,
+      "end": 5157
+    },
+    {
+      "text": "Forced elements",
+      "type": "section",
+      "line": 141,
+      "start": 5158,
+      "end": 5176
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 142,
+      "start": 5177,
+      "end": 5177
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "WNĘTRZE. FORCED ELEMENTS - NIGHT",
+      "type": "scene_heading",
+      "line": 143,
+      "start": 5178,
+      "end": 5211
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 144,
+      "start": 5212,
+      "end": 5212
+    },
+    {
+      "text": "INT. ACTION",
+      "type": "action",
+      "line": 145,
+      "start": 5213,
+      "end": 5225
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 146,
+      "start": 5226,
+      "end": 5226
+    },
+    {
+      "text": "McCABE",
+      "type": "character",
+      "line": 147,
+      "start": 5227,
+      "end": 5234
+    },
+    {
+      "text": "*Happy birthday to you!*",
+      "type": "dialogue",
+      "line": 148,
+      "start": 5235,
+      "end": 5258
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 149,
+      "start": 5259,
+      "end": 5259
+    },
+    {
+      "text": "FADE TO GREEN.",
+      "type": "transition",
+      "line": 150,
+      "start": 5260,
+      "end": 5276
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 151,
+      "start": 5277,
+      "end": 5277
+    },
+    {
+      "text": "Sections and synopsis",
+      "type": "section",
+      "line": 152,
+      "start": 5278,
+      "end": 5302
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 153,
+      "start": 5303,
+      "end": 5303
+    },
+    {
+      "text": "Section synopsis",
+      "type": "synopsis",
+      "line": 154,
+      "start": 5304,
+      "end": 5322
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 155,
+      "start": 5323,
+      "end": 5323
+    },
+    {
+      "text": "Subsection",
+      "type": "section",
+      "line": 156,
+      "start": 5324,
+      "end": 5338
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 157,
+      "start": 5339,
+      "end": 5339
+    },
+    {
+      "text": "Subsection synopsis",
+      "type": "synopsis",
+      "line": 158,
+      "start": 5340,
+      "end": 5361
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 159,
+      "start": 5362,
+      "end": 5362
+    },
+    {
+      "text": "Additional synopsis",
+      "type": "synopsis",
+      "line": 160,
+      "start": 5363,
+      "end": 5384
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 161,
+      "start": 5385,
+      "end": 5385
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "start": 5442,
+      "end": 5442
+    },
+    {
+      "text": "INT. SCENE - DAY",
+      "type": "scene_heading",
+      "line": 162,
+      "start": 5386,
+      "end": 5402
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 163,
+      "start": 5403,
+      "end": 5403
+    },
+    {
+      "text": "Scene synopsis",
+      "type": "synopsis",
+      "line": 164,
+      "start": 5404,
+      "end": 5420
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 165,
+      "start": 5421,
+      "end": 5421
+    },
+    {
+      "text": "Action.",
+      "type": "action",
+      "line": 166,
+      "start": 5422,
+      "end": 5429
+    },
+    {
+      "text": "",
+      "type": "separator",
+      "line": 167,
+      "start": 5430,
+      "end": 5430
+    },
+    {
+      "text": "THE END.",
+      "type": "transition",
+      "line": 168,
+      "start": 5431,
+      "end": 5441
+    }
+  ]
+}
