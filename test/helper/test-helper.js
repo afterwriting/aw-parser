@@ -38,7 +38,8 @@ testHelper.getConfigWith = function(value) {
         print_sections: value,
         print_synopsis: value,
         each_scene_on_new_page: value,
-        double_space_between_scenes: value
+        double_space_between_scenes: value,
+        use_dual_dialogue: value
     }
 };
 
