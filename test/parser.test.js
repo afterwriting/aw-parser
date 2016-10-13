@@ -29,6 +29,24 @@ describe('Parser', function() {
 
     });
 
+    it('Parses inline capitals as action', function() {
+        config = testHelper.getConfigWith(true);
+
+        script = "Action\nACTION.\nAction";
+        result = parser.parse(script, config);
+
+        testHelper.verifyTokenTypes(result.tokens, ['action', 'action', 'action']);
+    });
+
+    it('Parses shot', function() {
+        config = testHelper.getConfigWith(true);
+
+        script = "Action\n\nSHOT\n\nAction";
+        result = parser.parse(script, config);
+
+        testHelper.verifyTokenTypes(result.tokens, ['action', 'separator', 'shot', 'separator', 'action']);
+    });
+
     it('Ignores blank lines before first token', function() {
         script = '\n\n\n\n\nTitle:Title';
         result = parser.parse(script, config);

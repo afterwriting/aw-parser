@@ -6,7 +6,7 @@ var testHelper = {};
 testHelper.properties = ['text', 'type', 'line', 'start', 'end'];
 
 testHelper.verifyTokenProperty = function(token, expectedToken, property, index, errorPrefix) {
-    chai.assert.strictEqual(token[property], expectedToken[property], '[' + errorPrefix + '] #' + index + ' has incorrect ' + property);
+    chai.assert.strictEqual(token[property], expectedToken[property], '[' + errorPrefix + '] #' + index + ' has incorrect ' + property + ', line: ' + token.line);
 };
 
 testHelper.verifyToken = function(token, expectedToken, index, errorPrefix) {

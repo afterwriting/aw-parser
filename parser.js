@@ -57,6 +57,7 @@ parser.parse = function(original_script, cfg) {
         scene_number = 1,
         match, text, last_title_page_token,
         token, last_was_separator = false,
+        top_or_separated = false,
         token_category = 'none',
         last_character_index,
         dual_right,
@@ -119,6 +120,7 @@ parser.parse = function(original_script, cfg) {
             }
         }
 
+        top_or_separated = last_was_separator || i === 0;
         token_category = 'script';
 
         if (!title_page_started && regex.title_page.test(token.text)) {
@@ -180,7 +182,7 @@ parser.parse = function(original_script, cfg) {
             } else if (token.text.length && token.text[0] === '!') {
                 token.type = 'action';
                 token.text = token.text.substr(1);
-            } else if ((token.text.length > 0 && token.text[0] === '@') || token.text === token.text.toUpperCase()) {
+            } else if ((token.text.length > 0 && token.text[0] === '@') || (token.text === token.text.toUpperCase() && top_or_separated)) {
                 if (i === lines_length || i === lines_length - 1 || lines[i + 1].trim().length === 0) {
                     token.type = 'shot';
                 } else {
