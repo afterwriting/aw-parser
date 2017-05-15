@@ -186,19 +186,21 @@ describe('Parser', function() {
         it('Breaking a page before a header', function() {
             script = 'INT. HEADER 1\n\nAction\n\nINT. HEADER 2';
             config.print_headers = true;
+            config.print_actions = true;
             config.each_scene_on_new_page = true;
             result = parser.parse(script, config);
 
-            testHelper.verifyTokenTypes(result.tokens, ['scene_heading', 'separator', 'page_break', 'scene_heading']);
+            testHelper.verifyTokenTypes(result.tokens, ['scene_heading', 'separator', 'action', 'separator', 'page_break', 'scene_heading']);
         });
 
         it('Double space before headers', function() {
             script = 'INT. HEADER 1\n\nAction\n\nINT. HEADER 2';
             config.print_headers = true;
+            config.print_actions = true;
             config.double_space_between_scenes = true;
             result = parser.parse(script, config);
 
-            testHelper.verifyTokenTypes(result.tokens, ['scene_heading', 'separator', 'separator', 'scene_heading']);
+            testHelper.verifyTokenTypes(result.tokens, ['scene_heading', 'separator', 'action', 'separator', 'separator', 'scene_heading']);
         });
 
         it('Ignoring types', function() {
@@ -214,7 +216,44 @@ describe('Parser', function() {
             result = parser.parse(script, config);
 
             chai.assert.strictEqual(result.tokens[0].text, 'Test test.');
-        })
+        });
+
+        it('Multiple empty lines', function() {
+            script = 'INT. HEADER 1\n\nAction\n\n\n\nAction';
+            config.print_headers = true;
+            config.print_actions = true;
+            config.merge_multiple_empty_lines = false;
+            result = parser.parse(script, config);
+
+            testHelper.verifyTokenTypes(result.tokens, ['scene_heading', 'separator', 'action', 'separator', 'separator', 'separator', 'action']);
+        });
+
+        it('Multiple empty lines with double space between headers', function() {
+            script = 'INT. HEADER\n\nAction.\n\nINT. HEADER\n\nAction.\n\n\nINT. HEADER\n\nAction.';
+            config.print_headers = true;
+            config.print_actions = true;
+            config.merge_multiple_empty_lines = false;
+            config.double_space_between_scenes = true;
+            result = parser.parse(script, config);
+
+            testHelper.verifyTokenTypes(result.tokens, [
+                'scene_heading',
+                'separator',
+                'action',
+                'separator',
+                'separator', // separator added automatically
+
+                'scene_heading',
+                'separator',
+                'action',
+                'separator',
+                'separator',
+                'separator', // extra separator added anyway, even if two lines are already added
+
+                'scene_heading',
+                'separator',
+                'action']);
+        });
     });
 
 });

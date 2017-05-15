@@ -1,0 +1,17 @@
+textarea.config {
+    width: 400px;
+    height: 200px;
+}
+
+textarea.config.invalid {
+    border: 2px solid red;
+}
+
+textarea.editor {
+    width: 500px;
+    height: 200px;
+}
+
+.results {
+    font-family: monospace;
+}

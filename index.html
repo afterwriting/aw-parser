@@ -1,10 +1,12 @@
 <html>
-<head>
     <script type="text/javascript" src="dist/aw-parser.amd.js"></script>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<textarea id="editor">
+<textarea id="config" class="config"></textarea>
+
+<textarea id="editor" class="editor">
 
 Title: Test Script
 Author: John Doe
@@ -21,12 +23,16 @@ HERO 2
 Hello
 </textarea>
 
-<p id="results"></p>
+<p id="results" class="results"></p>
 
 <script type="text/javascript">
 
     function getEditor() {
         return document.getElementById('editor');
+    }
+
+    function getConfig() {
+        return document.getElementById('config');
     }
 
     function getResults() {
@@ -48,25 +54,65 @@ Hello
         return '<b>Title:</b><br/><br/>' + titleHTML + '<br/><br/><b>Pages:</b><br/><br/>' + pagesHTML;
     }
 
-    function parse() {
-        var script, result;
-
-        script = getEditor().value;
-        result = awParser.parser.parse(script, {
-            print_actions: true,
-            print_dialogues: true,
-            print_synopsis: true,
-            print_sections: true,
-            print_headers: true,
-            print_notes: true
-        });
-
-        getResults().innerHTML = parserResultToHTML(result);
-    }
-
     window.onload = function() {
-        getEditor().onkeyup = parse;
-        parse();
+        presenter.loadDefaults();
+        presenter.init();
+    };
+
+    var presenter = {
+
+        getConfig: function() {
+            try {
+                var defaultConfig = window.localStorage.getItem('config');
+                defaultConfig = JSON.parse(defaultConfig);
+            } catch (e) {
+                defaultConfig = {
+                    print_headers: true,
+                    double_space_between_scenes: true
+                };
+            }
+
+            return defaultConfig;
+        },
+
+        getLastEditor: function() {
+            return window.localStorage.getItem('text');
+        },
+
+        loadDefaults: function() {
+            getConfig().value = JSON.stringify(this.getConfig(), null, 2);
+
+            var defaultText = this.getLastEditor();
+            if (defaultText) {
+                getEditor().value = defaultText;
+            }
+        },
+
+        init: function() {
+            getEditor().onkeyup = this.parse.bind(this);
+            getConfig().onkeyup = this.parse.bind(this);
+            this.parse();
+        },
+
+        parse: function() {
+            var script, result;
+
+            script = getEditor().value;
+
+            try {
+                config = JSON.parse(getConfig().value);
+
+                result = awParser.parser.parse(script, config);
+
+                getResults().innerHTML = parserResultToHTML(result);
+                getConfig().classList.remove('invalid');
+                window.localStorage.setItem('text', getEditor().value);
+                window.localStorage.setItem('config', getConfig().value);
+            } catch (e) {
+                getConfig().classList.add('invalid');
+            }
+        }
+
     }
 
 </script>
