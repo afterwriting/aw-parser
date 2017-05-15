@@ -244,21 +244,21 @@ parser.parse = function(original_script, cfg) {
         token = create_token(text, current, i);
         current = token.end + 1;
 
+ 
         if (text.trim().length === 0 && text !== "  ") {
-            if (!last_was_separator) {
-                state = 'normal';
-                dual_right = false;
-                token.type = 'separator';
-                last_was_separator = true;
-                result.tokens.push(token);
-                continue;
-            } else {
-                // ignore blank separators
-                if (title_page_started) {
-                    state = 'normal';
-                }
+            var skip_separator = cfg.merge_multiple_empty_lines && last_was_separator;
+
+            state = 'normal';
+
+            if (skip_separator || state === 'title_page') {
                 continue;
             }
+
+            dual_right = false;
+            token.type = 'separator';
+            last_was_separator = true;
+            result.tokens.push(token);
+            continue;
         }
 
         top_or_separated = last_was_separator || i === 0;
@@ -377,7 +377,7 @@ parser.parse = function(original_script, cfg) {
     }
 
     var current_index = 0, previous_type = null;
-    // tidy up sepataors
+    // tidy up separators
     while (current_index < result.tokens.length) {
         var current_token = result.tokens[current_index];
 
@@ -388,7 +388,7 @@ parser.parse = function(original_script, cfg) {
             (!cfg.print_sections && current_token.type === "section") ||
             (!cfg.print_synopsis && current_token.type === "synopsis") ||
             (!cfg.print_dialogues && current_token.is_dialogue()) ||
-            (current_token.is('separator') && previous_type === 'separator')) {
+            (cfg.merge_multiple_empty_lines && current_token.is('separator') && previous_type === 'separator')) {
 
             result.tokens.splice(current_index, 1);
             continue;
