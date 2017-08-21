@@ -1,6 +1,6 @@
 {
   "name": "aw-parser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Fountain parser",
   "main": "index.js",
   "scripts": {
