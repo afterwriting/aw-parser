@@ -9,7 +9,7 @@
         "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
         "debug": "mocha --watch --reporter spec --inspect --recursive",
         "doc": "jsdoc -c jsdoc.conf.json -R README.md -P package.json -t node_modules/docdash -u docs/tutorials",
-        "eslint": "eslint --format=table lib/**/*.js scripts/**/*.js",
+        "eslint": "eslint --format=table parser.js helpers.js",
         "postversion": "git push && git push --tags",
         "preversion": "git fetch --tags && node scripts/changelog.js https://github.com/afterwriting/aw-parser console",
         "test": "mocha --recursive",
