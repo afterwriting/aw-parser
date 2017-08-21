@@ -1,5 +1,5 @@
 {
-  "extends": "eslint:recommended",
+//  "extends": "eslint:recommended",
   "rules": {
     "indent": ["error", 4],
     "semi": "error",
@@ -7,12 +7,12 @@
 
     "quotes": ["error", "double"],
 
-    "complexity": ["error", { "max": 4 }],
-    "max-depth": ["error", { "max": 4 }],
+//    "complexity": ["error", { "max": 4 }],
+//    "max-depth": ["error", { "max": 4 }],
     "max-nested-callbacks": ["error", { "max": 4 }],
-    "max-params": ["error", { "max": 4 }],
-    "max-statements": ["error", { "max": 20 }],
-    "max-len": ["error", { "code": 120 }]
+    "max-params": ["error", { "max": 4 }]
+//    "max-statements": ["error", { "max": 20 }],
+//    "max-len": ["error", { "code": 120 }]
   },
   "env": {
     "browser": true,
