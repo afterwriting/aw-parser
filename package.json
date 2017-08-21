@@ -1,0 +1,44 @@
+{
+  "name": "aw-parser",
+  "version": "0.0.5",
+  "description": "Fountain parser",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "codecov": "codecov",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+    "debug": "mocha --watch --reporter spec --inspect --recursive",
+    "doc": "jsdoc -c jsdoc.conf.json -R README.md -P package.json -t node_modules/docdash -u docs/tutorials",
+    "eslint": "eslint --format=table parser.js helpers.js",
+    "postversion": "git push && git push --tags",
+    "preversion": "git fetch --tags && node scripts/changelog.js https://github.com/afterwriting/aw-parser console",
+    "test": "mocha --recursive",
+    "version": "npm run build && git add ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ifrost@github.com/afterwriting/aw-parser.git"
+  },
+  "keywords": [
+    "fountain",
+    "parser",
+    "screenwriting"
+  ],
+  "author": "Piotr Jamroz <pm.jamroz@gmail.com> (https://about.me/piotr.jamroz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afterwriting/aw-parser/issues"
+  },
+  "homepage": "https://github.com/afterwriting/aw-parser#readme",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "codecov": "^2.2.0",
+    "docdash": "^0.4.0",
+    "eslint": "^4.0.0",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.4.3",
+    "mocha": "^3.4.2",
+    "sinon": "^3.0.0",
+    "webpack": "^3.0.0"
+  }
+}
