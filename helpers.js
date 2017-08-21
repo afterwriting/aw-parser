@@ -10,12 +10,12 @@ operators.is = function() {
 };
 
 operators.is_dialogue = function() {
-    return this.is('character', 'parenthetical', 'dialogue');
+    return this.is("character", "parenthetical", "dialogue");
 };
 
 operators.name = function() {
     var character = this.text;
-    var p = character.indexOf('(');
+    var p = character.indexOf("(");
     if (p !== -1) {
         character = character.substring(0, p);
     }
@@ -25,8 +25,8 @@ operators.name = function() {
 
 operators.location = function() {
     var location = this.text.trim();
-    location = location.replace(/^(INT\.?\/EXT\.?)|(I\/E)|(INT\.?)|(EXT\.?)/, '');
-    var dash = location.lastIndexOf(' - ');
+    location = location.replace(/^(INT\.?\/EXT\.?)|(I\/E)|(INT\.?)|(EXT\.?)/, "");
+    var dash = location.lastIndexOf(" - ");
     if (dash !== -1) {
         location = location.substring(0, dash);
     }
@@ -34,22 +34,22 @@ operators.location = function() {
 };
 
 operators.has_scene_time = function(time) {
-    var suffix = this.text.substring(this.text.indexOf(' - '));
-    return this.is('scene_heading') && suffix.indexOf(time) !== -1;
+    var suffix = this.text.substring(this.text.indexOf(" - "));
+    return this.is("scene_heading") && suffix.indexOf(time) !== -1;
 };
 
 operators.location_type = function() {
     var location = this.text.trim();
     if (/^I(NT.?)?\/E(XT.?)?/.test(location)) {
-        return 'mixed';
+        return "mixed";
     }
     else if (/^INT.?/.test(location)) {
-        return 'int';
+        return "int";
     }
     else if (/^EXT.?/.test(location)) {
-        return 'ext';
+        return "ext";
     }
-    return 'other';
+    return "other";
 };
 
 var enrich_token = function(token) {
@@ -101,8 +101,8 @@ helpers.create_line = function(line) {
     line.start = line.start || 0;
     line.end = line.end || 0;
     line.token = line.token || helpers.create_token({
-            type: line.type
-        });
+        type: line.type
+    });
     line.token.lines = line.token.lines || [line];
     return enrich_line(line);
 };
@@ -118,11 +118,11 @@ helpers.create_token = function(token) {
 
 helpers.create_separator = function(start, end) {
     return helpers.create_token({
-        text: '',
+        text: "",
         start: start,
         end: end,
-        lines: [''],
-        type: 'separator'
+        lines: [""],
+        type: "separator"
     });
 };
 
