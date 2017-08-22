@@ -28,13 +28,17 @@ fi
 if [[ $version ]]; then
   echo "Versioning $version"
   npm version $version -m "v%s"
-  echo "Flagging to deploy to npm"
+  echo "Flagging for NPM deployment"
   mkdir -p tmp/flags
   touch tmp/flags/npm
+else
+  echo "Not flagged for NPM deployment"
 fi
 
 if [[ $message =~ "[gh-pages]" ]]; then
-  echo "Flagging to deploy to gh-pages"
+  echo "Flagging for GitHub Pages deployment"
   mkdir -p tmp/flags
   touch tmp/flags/gh-pages
+else
+  echo "Not flagged for GitHub Pages deployment"
 fi
