@@ -1,6 +1,6 @@
 {
   "name": "aw-parser",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Fountain parser",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,6 @@
     "eslint": "^4.0.0",
     "istanbul": "^0.4.5",
     "jsdoc": "^3.4.3",
-    "mocha": "^3.4.2",
     "mocha": "^4.0.0",
     "sinon": "^4.0.0",
     "webpack": "^3.0.0"
