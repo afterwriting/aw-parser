@@ -148,6 +148,11 @@ describe('Parser', function() {
             testHelper.verifyTokenTypes(result.tokens, ['transition']);
         });
 
+        it('Forced heading takes priority over default transitions', function() {
+            script = '.CUT TO:';
+            result = parser.parse(script, config);
+            testHelper.verifyTokenTypes(result.tokens, ['scene_heading']);
+        });
     });
 
     describe('Newline', function() {
