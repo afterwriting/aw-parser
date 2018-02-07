@@ -145,19 +145,6 @@ parser.parse = function(original_script, cfg) {
         if (state === "normal") {
             if (token.text.match(regex.line_break)) {
                 token_category = "none";
-            } else if (token.text.match(regex.centered)) {
-                token.type = "centered";
-                token.text = token.text.replace(/>|</g, "").trim();
-            } else if (token.text.match(regex.transition)) {
-                token.text = token.text.replace(/> ?/, "");
-                token.type = "transition";
-            } else if (match = token.text.match(regex.synopsis)) {
-                token.text = match[1];
-                token.type = token.text ? "synopsis" : "separator";
-            } else if (match = token.text.match(regex.section)) {
-                token.level = match[1].length;
-                token.text = match[2];
-                token.type = "section";
             } else if (token.text.match(regex.scene_heading)) {
                 token.text = token.text.replace(/^\./, "");
                 if (cfg.each_scene_on_new_page && scene_number !== 1) {
@@ -176,6 +163,19 @@ parser.parse = function(original_script, cfg) {
                     token.number = match[1];
                 }
                 scene_number++;
+            } else if (token.text.match(regex.centered)) {
+                token.type = "centered";
+                token.text = token.text.replace(/>|</g, "").trim();
+            } else if (token.text.match(regex.transition)) {
+                token.text = token.text.replace(/> ?/, "");
+                token.type = "transition";
+            } else if (match = token.text.match(regex.synopsis)) {
+                token.text = match[1];
+                token.type = token.text ? "synopsis" : "separator";
+            } else if (match = token.text.match(regex.section)) {
+                token.level = match[1].length;
+                token.text = match[2];
+                token.type = "section";
             } else if (token.text.match(regex.page_break)) {
                 token.text = "";
                 token.type = "page_break";
