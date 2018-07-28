@@ -45,7 +45,7 @@ parser.parse = function(original_script, cfg) {
 
     var create_token = function(text, cursor, line) {
         return h.create_token({
-            text: text.trim(),
+            text: text,
             start: cursor,
             end: cursor + text.length - 1 + new_line_length,
             line: line
@@ -131,13 +131,13 @@ parser.parse = function(original_script, cfg) {
             if (regex.title_page.test(token.text)) {
                 var index = token.text.indexOf(":");
                 token.type = token.text.substr(0, index).toLowerCase();
-                token.text = token.text.substr(index + 1);
+                token.text = token.text.substr(index + 1).trim();
                 last_title_page_token = token;
                 result.title_page.push(token);
                 title_page_started = true;
                 continue;
             } else if (title_page_started) {
-                last_title_page_token.text += (last_title_page_token.text ? "\n" : "") + token.text;
+                last_title_page_token.text += (last_title_page_token.text ? "\n" : "") + token.text.trim();
                 continue;
             }
         }
@@ -229,7 +229,7 @@ parser.parse = function(original_script, cfg) {
             if (token.text && token.text[0] === "~") {
                 token.text = "*" + token.text.substr(1) + "*";
             }
-            token.text = token.text.trim();
+            token.text = token.is("action") ? token.text : token.text.trim();
             result.tokens.push(token);
         }
 

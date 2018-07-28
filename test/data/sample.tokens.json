@@ -8,7 +8,7 @@
       "end": 60
     },
     {
-      "text": " written by",
+      "text": "written by",
       "type": "credit",
       "line": 8,
       "start": 94,
@@ -22,7 +22,7 @@
       "end": 121
     },
     {
-      "text": " script based on...",
+      "text": "script based on...",
       "type": "source",
       "line": 12,
       "start": 158,
@@ -36,7 +36,7 @@
       "end": 192
     },
     {
-      "text": " 01/12/2010",
+      "text": "01/12/2010",
       "type": "date",
       "line": 16,
       "start": 237,
@@ -50,7 +50,7 @@
       "end": 262
     },
     {
-      "text": " Licence info",
+      "text": "Licence info",
       "type": "copyright",
       "line": 20,
       "start": 313,
@@ -406,7 +406,7 @@
       "end": 2044
     },
     {
-      "text": "What the f\\*ck! Escape\\_escape\\*escape.",
+      "text": "What the f\\*ck! Escape\\_escape\\*escape. ",
       "type": "action",
       "line": 72,
       "start": 2045,

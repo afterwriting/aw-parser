@@ -155,6 +155,46 @@ describe('Parser', function() {
         });
     });
 
+    describe('Retain whitespace', function() {
+
+        beforeEach(function() {
+            config = testHelper.getConfigWith(true);
+        });
+
+        it('Retains whitespace on action elements', function() {
+            var lines = [
+                'Action line.',
+                '\tAction line with tabs\t',
+                '  Action line with spaces  '
+            ];
+            script = lines.join('\n');
+            result = parser.parse(script, config);
+            testHelper.verifyTokenTypes(result.tokens, ['action', 'action', 'action']);
+
+            chai.assert.strictEqual(result.tokens[0].text, lines[0]);
+            chai.assert.strictEqual(result.tokens[1].text, lines[1]);
+            chai.assert.strictEqual(result.tokens[2].text, lines[2]);
+        });
+
+        it('Does not retain whitespace on non-action elements', function() {
+            var lines = [
+                'HERO',
+                'Dialogue line.',
+                '\tDialogue line with tabs\t',
+                '  Dialogue line with spaces  '
+            ];
+            script = lines.join('\n');
+            result = parser.parse(script, config);
+            testHelper.verifyTokenTypes(result.tokens, ['character', 'dialogue', 'dialogue', 'dialogue']);
+
+            chai.assert.strictEqual(result.tokens[0].text, lines[0].trim());
+            chai.assert.strictEqual(result.tokens[1].text, lines[1].trim());
+            chai.assert.strictEqual(result.tokens[2].text, lines[2].trim());
+            chai.assert.strictEqual(result.tokens[3].text, lines[3].trim());
+        });
+
+    });
+
     describe('Newline', function() {
 
         var crlf, cr, lf, config;
