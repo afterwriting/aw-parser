@@ -201,6 +201,8 @@ parser.parse = function(original_script, cfg) {
                             dual_right = true;
                         }
                         token.text = token.text.replace("^", "");
+                    } else if (last_character_index !== undefined && result.tokens[last_character_index].text === token.text && cfg.dialogue_contd) {
+                        token.text = token.text.trim() + ' ' + cfg.dialogue_contd;
                     }
                     last_character_index = result.tokens.length;
                 }
