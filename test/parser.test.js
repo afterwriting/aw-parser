@@ -299,6 +299,84 @@ describe('Parser', function() {
                 'separator',
                 'action']);
         });
+
+        describe('Automatically continued dialogue', function() {
+
+            beforeEach(function() {
+                config = testHelper.getConfigWith(true);
+            });
+
+            it('added when set in config', function() {
+                var lines = [
+                    'HERO',
+                    'Hello!',
+                    '',
+                    'Action.',
+                    '',
+                    'HERO',
+                    'Hello again!',
+                    '',
+                    'Action.',
+                    '',
+                    'HERO 2',
+                    'Nope.'
+                ];
+                script = lines.join('\n');
+                config.dialogue_contd = '(CONT’D)';
+
+                result = parser.parse(script, config);
+                chai.assert.strictEqual(result.tokens[0].text, 'HERO');
+                chai.assert.strictEqual(result.tokens[5].text, 'HERO (CONT’D)');
+                chai.assert.strictEqual(result.tokens[10].text, 'HERO 2');
+            });
+
+            it('not added when not set in config', function() {
+                var lines = [
+                    'HERO',
+                    'Hello!',
+                    '',
+                    'Action.',
+                    '',
+                    'HERO',
+                    'Hello again!',
+                    '',
+                    'Action.',
+                    '',
+                    'HERO 2',
+                    'Nope.'
+                ];
+                script = lines.join('\n');
+
+                result = parser.parse(script, config);
+                chai.assert.strictEqual(result.tokens[0].text, 'HERO');
+                chai.assert.strictEqual(result.tokens[5].text, 'HERO');
+                chai.assert.strictEqual(result.tokens[10].text, 'HERO 2');
+            });
+
+            it('not added when set in config but not continuous', function() {
+                var lines = [
+                    'HERO',
+                    'Hello!',
+                    '',
+                    'Action.',
+                    '',
+                    'HERO 2',
+                    'Nope.',
+                    '',
+                    'Action.',
+                    '',
+                    'HERO',
+                    'Hello again!',
+                ];
+                script = lines.join('\n');
+                config.dialogue_contd = '(CONT’D)';
+
+                result = parser.parse(script, config);
+                chai.assert.strictEqual(result.tokens[0].text, 'HERO');
+                chai.assert.strictEqual(result.tokens[5].text, 'HERO 2');
+                chai.assert.strictEqual(result.tokens[10].text, 'HERO');
+            });
+        })
     });
 
 });
