@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+
 var parser = require('../parser');
 var testHelper = require('./helper/test-helper');
 var chai = require('chai');
@@ -14,16 +16,18 @@ describe('Parser', function() {
 
     it('Parsing types', function() {
         config = testHelper.getConfigWith(true);
-        script = '#Section\n\n=Synopsis\n\nINT. HEADER 1\n\nAction\n\nHERO\n(Parenthetical)\nDialogue';
+        script = '#Section\n\n=Synopsis\n\nINT. HEADER 1\n\nAction\n\nHERO\n(Parenthetical)\nDialogue\n {two spaces} \nDialogue';
         result = parser.parse(script, config);
 
         testHelper.verifyTokenTypes(result.tokens, [
             'section', 'separator',
             'synopsis', 'separator',
             'scene_heading', 'separator',
-            'action', 'separator',
+            'action', 'separator',            
             'character',
             'parenthetical',
+            'dialogue',
+            'dialogue_double_line_break', "separator", 
             'dialogue'
         ]);
 
@@ -193,7 +197,36 @@ describe('Parser', function() {
             chai.assert.strictEqual(result.tokens[3].text, lines[3].trim());
         });
 
+        it('Adds double line break between dialogue', function() { 
+            var lines = [
+                'HERO',
+                'Dialogue line.',
+                '{two spaces}', // double line break - no spaces
+                'Dialogue line.',
+                'Dialogue line.',
+                ' {two spaces} ', // double line break - spaces
+                'Dialogue line.'
+            ];
+
+            var renderedLines = [                
+                'HERO',
+                'Dialogue line.',
+                "", "", // double line break - no spaces                
+                'Dialogue line.',
+                'Dialogue line.',
+                "", "",
+                'Dialogue line.'            
+            ];
+            script = lines.join('\n');
+            result = parser.parse(script, config);
+            testHelper.verifyTokenTypes(result.tokens, ['character', 'dialogue', 'dialogue_double_line_break', 'separator', 'dialogue', 'dialogue', 'dialogue_double_line_break', 'separator', 'dialogue']);
+            
+            result.tokens.forEach(function(token, index) {
+                chai.assert.strictEqual(token.text, renderedLines[index].trim());
+            });                        
+        });
     });
+    
 
     describe('Newline', function() {
 

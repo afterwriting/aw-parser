@@ -5,5 +5,8 @@ local/
 tmp/
 .idea/
 
+report.*.json
 changelog.txt
 npm-debug.log
+yarn.lock
+.vscode/launch.json
